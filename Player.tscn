@@ -1,12 +1,30 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://art/player.glb" type="PackedScene" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
 [ext_resource path="res://art/Bear/Bear.tscn" type="PackedScene" id=3]
-[ext_resource path="res://art/mob.glb" type="PackedScene" id=4]
+[ext_resource path="res://art/Sword/Sword.glb" type="PackedScene" id=4]
+[ext_resource path="res://Weapon.gd" type="Script" id=5]
 
 [sub_resource type="BoxShape" id=2]
-extents = Vector3( 1.5, 0.25, 0.5 )
+margin = 0.005
+extents = Vector3( 1.95, 0.13, 0.85 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Swing"
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sword Pivot:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 178.385, 0 ), Vector3( 0, 121.617, 0 ), Vector3( 0, 178.385, 0 ) ]
+}
 
 [sub_resource type="SphereShape" id=1]
 radius = 0.844854
@@ -21,17 +39,22 @@ visible = false
 
 [node name="Character" parent="Pivot" instance=ExtResource( 1 )]
 
-[node name="KinematicBody" type="KinematicBody" parent="Pivot"]
+[node name="Weapon" type="KinematicBody" parent="Pivot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25977, 0, 0 )
+script = ExtResource( 5 )
 
-[node name="Sword Pivot" type="Spatial" parent="Pivot/KinematicBody"]
+[node name="Sword Pivot" type="Spatial" parent="Pivot/Weapon"]
 transform = Transform( -0.999603, 0, 0.0281832, 0, 1, 0, -0.0281832, 0, -0.999603, -2.48391, -0.0992398, -0.141492 )
 
-[node name="mob" parent="Pivot/KinematicBody/Sword Pivot" instance=ExtResource( 4 )]
-transform = Transform( 0.0202839, 0, -0.999177, 0, 0.5, 0, 0.499588, 0, 0.0405678, 0.552559, 0, 0 )
+[node name="Sword Skin" parent="Pivot/Weapon/Sword Pivot" instance=ExtResource( 4 )]
+transform = Transform( -0.0234092, 0.999308, 0.0288543, -0.99931, -0.0242228, 0.0281749, 0.0288544, -0.0281749, 0.999184, 2.02298, -2.98023e-08, -0.0570367 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Pivot/KinematicBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.64769, 0, -0.265493 )
+[node name="CollisionShape" type="CollisionShape" parent="Pivot/Weapon"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4522, -0.0727566, -0.137581 )
 shape = SubResource( 2 )
+
+[node name="SwordAnimator" type="AnimationPlayer" parent="Pivot/Weapon"]
+anims/Swing = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.168831, 0 )
