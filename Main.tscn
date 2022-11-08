@@ -23,12 +23,14 @@ mesh = SubResource( 2 )
 material/0 = ExtResource( 3 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31778, 1.89941, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31778, 4.76134, 0 )
+light_energy = 2.116
 shadow_enabled = true
+shadow_bias = 1.2
 omni_range = 274.706
 
 [node name="BearFinal" parent="OmniLight" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.14804, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.104861, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
