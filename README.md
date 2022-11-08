@@ -3,9 +3,17 @@
 
 ## Table of Contents  
 - [Exec Summary](#executive-summary)  
-- [Gameplay](#gameplay)  
+  - [Game Concept](#game-concept)
+  - [Genre](#genre)
+  - [Target Audience](#target-audience)
+  - [MVP](#minimum-viable-product)
+- [Gameplay](#gameplay) 
+  - [Objectives](#objectives)
+  - [GUI](#gui)
 - [Mechanics](#mechanics)
 - [Game Elements](#game-elements)
+  - [Environment](#environment)
+  - [Storyline Ideas](#storyline-ideas)
 - [Assets](#assets)
 
 ## Executive Summary
@@ -22,7 +30,7 @@ Adventure, action, top-down, hack and slash rpg game.
 ### Target Audience
 Players who enjoy action hack and slash games with a good story.
 
-### Minimum Viable Product (Under-Construction)
+### Minimum Viable Product
 - 1 room with objects
 - 1 enemy type
 - 1 weapon (sword)
@@ -44,48 +52,49 @@ To beat the game, the player needs to clear all the rooms, collecting all pieces
   - volume
 
 ## Mechanics
-The gameplay will consist of strategic placement of light sources (player uses the shadows generated from lights and combat mechanics (manouvering around enemies). THe player may not progress to the next room until clearing the current room.
+The gameplay will consist of strategic placement of light sources (player uses the shadows generated from lights and combat mechanics (manouvering around enemies). The player may not progress to the next room until clearing the current room.
 
-Setup Phase: \
-Upon entering each room, player will have time to set up light sources to specify the direction of their shadows. The player may then start the wave, and enemies will spawn from the edges of the room and approach the player.
+### Setup Phase:
+- Upon entering each room, player will have time to set up light sources to specify the direction of their shadows. The player may then start the wave, and enemies will spawn from the edges of the room and approach the player.
 
-Combat Phase:
+### Combat Phase:
 - The player attacks the enemy using their shadows 
   - size of shadow depends on distance from the light source - the further away the larger the shadow, but also the less damage dealt
   - player attacks by swinging the sword (has cooldown time), all enemies in the area covered by the sword's shadow will be damaged
 - upon player contact with enemies and enemy projectiles, player will lose HP.
 
-Post-Combat:
-- an exit will appear/unlock, and the player needs to walk through it
+### Post-Combat:
+- an exit will appear/unlock, and the player needs to walk through it to enter the next room
 
 
-## Environment (Under-Construction)
+## Game Elements
+### Environment
 - each room will be a room in the house, with familiar objects associated with the protagonist's memory. 
 
 - linear room progression - only 1 entrance and 1 exit - exit appears after clearing the room
   - scene transition (fade in fade out)
 
-Room Progression: \
-1. bedroom
+#### Room Progression:
+- bedroom
   - starting area (tutorial), protag. fights teddy bears, toys
-2. bathroom 
+- bathroom 
   - getting ready for the day
   - first room, protagonist fights bubble monsters
-3. kitchen - fighting cookie monster
+- kitchen - fighting cookie monster
   - cooking, eating
-4. garage
+- garage
   - playing, helping your dad out
-5. living room
+- living room
   - climax of story?
 
 
-## Storyline Ideas
+### Storyline Ideas
 - rooms + memories to go with the room = environment
 
 - after clearing a room it would remind them with the good memories
 - animal spirit will guide the child to the destination
 
-## Assets (Brainstorming)
+## Assets
 See one-drive
 
 
