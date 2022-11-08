@@ -38,9 +38,10 @@ script = ExtResource( 2 )
 visible = false
 
 [node name="Character" parent="Pivot" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 0.00912797, -0.999958, 0, 0.999958, 0.00912797, 0, 1.65186, 0 )
 
 [node name="Weapon" type="KinematicBody" parent="Pivot"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25977, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25977, 1.24457, 0 )
 script = ExtResource( 5 )
 
 [node name="Sword Pivot" type="Spatial" parent="Pivot/Weapon"]
@@ -57,5 +58,5 @@ shape = SubResource( 2 )
 anims/Swing = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.168831, 0 )
+transform = Transform( 1, 0, 0, 0, 0.999833, 0.01829, 0, -0.01829, 0.999833, 0, 0.168831, 0 )
 shape = SubResource( 1 )
