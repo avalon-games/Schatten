@@ -70,21 +70,23 @@ The gameplay will consist of strategic placement of light sources (player uses t
 ## Game Elements
 ### Environment
 - each room will be a room in the house, with familiar objects associated with the protagonist's memory. 
-
 - linear room progression - only 1 entrance and 1 exit - exit appears after clearing the room
   - scene transition (fade in fade out)
 
 #### Room Progression:
-- bedroom
+1. Bedroom
   - starting area (tutorial), protag. fights teddy bears, toys
-- bathroom 
+  - story: protag. gets the teddy bear from his parents as a birthday present (unwrapping happens in the bedroom).
+  - boss: large, enraged teddy bear
+  - minions: dinosaur toys
+2. Bathroom 
   - getting ready for the day
   - first room, protagonist fights bubble monsters
-- kitchen - fighting cookie monster
+2. Kitchen - fighting cookie monster
   - cooking, eating
-- garage
+4. Garage
   - playing, helping your dad out
-- living room
+5. Living Room
   - climax of story?
 
 

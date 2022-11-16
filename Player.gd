@@ -23,9 +23,10 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_up"):
 		direction.z -= 1
 	
-	if direction != Vector3.ZERO:
-		direction = direction.normalized()
-		$Pivot.look_at(translation + direction, Vector3.UP)
+	# Make the player look at the direction they are moving at:
+	# if direction != Vector3.ZERO:
+		# direction = direction.normalized()
+		# $Pivot.look_at(translation + direction, Vector3.UP)
 
 	velocity.x = direction.x * speed
 	velocity.z = direction.z * speed
