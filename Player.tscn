@@ -51,8 +51,8 @@ shape = SubResource( 2 )
 anims/Swing = SubResource( 3 )
 
 [node name="Capsule" parent="Pivot" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, -0.995357, -0.0962453, 0, 0.0962453, -0.995357, 0, 1.65186, 0 )
+transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, 3.80512, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.999833, 0.01829, 0, -0.01829, 0.999833, 0, 0.168831, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.168831, 0 )
 shape = SubResource( 1 )
