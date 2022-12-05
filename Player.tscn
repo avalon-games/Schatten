@@ -7,22 +7,34 @@
 
 [sub_resource type="BoxShape" id=2]
 margin = 0.005
-extents = Vector3( 1.95, 0.13, 0.85 )
+extents = Vector3( 1.83942, 0.13, 0.85 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "Swing"
 step = 0.0333333
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sword Pivot:rotation_degrees")
+tracks/0/path = NodePath("Position3D/Sword Pivot:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/keys = {
 "times": PoolRealArray( 0.1, 0.4, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0, 178.385, 0 ), Vector3( 0, 121.617, 0 ), Vector3( 0, 178.385, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Position3D:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.297, 0.594 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 180, 0 ), Vector3( 0, 0, 0 ) ]
 }
 
 [sub_resource type="SphereShape" id=1]
@@ -34,17 +46,19 @@ script = ExtResource( 2 )
 [node name="Pivot" type="Spatial" parent="."]
 
 [node name="Weapon" type="KinematicBody" parent="Pivot"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25977, 1.24457, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.245, 0 )
 script = ExtResource( 5 )
 
-[node name="Sword Pivot" type="Spatial" parent="Pivot/Weapon"]
-transform = Transform( -0.999603, 0, 0.0281832, 0, 1, 0, -0.0281832, 0, -0.999603, -2.48391, -0.0992398, -0.141492 )
+[node name="Position3D" type="Position3D" parent="Pivot/Weapon"]
 
-[node name="Sword Skin" parent="Pivot/Weapon/Sword Pivot" instance=ExtResource( 4 )]
+[node name="Sword Pivot" type="Spatial" parent="Pivot/Weapon/Position3D"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.979203, -0.0992398, -0.141492 )
+
+[node name="Sword Skin" parent="Pivot/Weapon/Position3D/Sword Pivot" instance=ExtResource( 4 )]
 transform = Transform( -0.0234092, 0.999308, 0.0288543, -0.99931, -0.0242228, 0.0281749, 0.0288544, -0.0281749, 0.999184, 2.02298, -2.98023e-08, -0.0570367 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Pivot/Weapon"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4522, -0.0727566, -0.137581 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.814, -0.0727566, -0.137581 )
 shape = SubResource( 2 )
 
 [node name="SwordAnimator" type="AnimationPlayer" parent="Pivot/Weapon"]
