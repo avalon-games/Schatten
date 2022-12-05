@@ -4,6 +4,10 @@
 [ext_resource path="res://art/Bear/Bear.tscn" type="PackedScene" id=2]
 [ext_resource path="res://art/Bedroom/woodplanks.material" type="Material" id=3]
 [ext_resource path="res://Camera.gd" type="Script" id=4]
+<<<<<<< Updated upstream
+=======
+[ext_resource path="res://art/Bedroom/BedroomProps.obj" type="ArrayMesh" id=5]
+>>>>>>> Stashed changes
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 30, 1, 30 )
@@ -39,5 +43,14 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.104861, 0 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 36.6966, 0 )
 script = ExtResource( 4 )
 
+<<<<<<< Updated upstream
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54208, -1.74718, 1.46263 )
+=======
+[node name="BedroomProps" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.327115, -1.2719, -0.110353 )
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 3 )
+material/8 = ExtResource( 3 )
+material/9 = ExtResource( 3 )
+>>>>>>> Stashed changes
