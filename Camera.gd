@@ -9,7 +9,7 @@ extends Camera
 # Called when the node enters the scene tree for the first time.
 # func _ready():
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	var position = get_viewport().get_mouse_position()
 	# if ev is InputEventMouseButton and ev.pressed and ev.button_index == 1:
 	var camera = get_node(".")
