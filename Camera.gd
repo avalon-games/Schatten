@@ -19,7 +19,10 @@ func _physics_process(_delta):
 	var space_state = get_world().direct_space_state
 	var result = space_state.intersect_ray(from, to)
 	if result:
-		get_node("../../Player").look_at(result.position, Vector3.UP)
+		var player = get_node("../../Player")
+		var target = result.position
+		target.y = player.get_global_translation().y
+		player.look_at(target, Vector3.UP)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
