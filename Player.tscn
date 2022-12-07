@@ -42,6 +42,8 @@ radius = 0.844854
 
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 2 )
+speed = null
+fall_acceleration = null
 
 [node name="Pivot" type="Spatial" parent="."]
 
@@ -50,12 +52,16 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.245, 0 )
 script = ExtResource( 5 )
 
 [node name="Position3D" type="Position3D" parent="Pivot/Weapon"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0687428, 1.52806, -0.00814056 )
 
 [node name="Sword Pivot" type="Spatial" parent="Pivot/Weapon/Position3D"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.979203, -0.0992398, -0.141492 )
 
 [node name="Sword Skin" parent="Pivot/Weapon/Position3D/Sword Pivot" instance=ExtResource( 4 )]
 transform = Transform( -0.0234092, 0.999308, 0.0288543, -0.99931, -0.0242228, 0.0281749, 0.0288544, -0.0281749, 0.999184, 2.02298, -2.98023e-08, -0.0570367 )
+
+[node name="SwordTip" type="Position3D" parent="Pivot/Weapon/Position3D/Sword Pivot"]
+transform = Transform( -0.0234092, 0.999308, 0.0288543, -0.99931, -0.0242228, 0.0281749, 0.0288544, -0.0281749, 0.999184, 3.83538, -2.38419e-07, -0.0570367 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Pivot/Weapon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.814, -0.0727566, -0.137581 )
