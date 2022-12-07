@@ -46,7 +46,7 @@ script = ExtResource( 2 )
 [node name="Pivot" type="Spatial" parent="."]
 
 [node name="Weapon" type="KinematicBody" parent="Pivot"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.245, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4062, 0 )
 script = ExtResource( 5 )
 
 [node name="Position3D" type="Position3D" parent="Pivot/Weapon"]
