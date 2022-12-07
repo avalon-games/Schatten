@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art/Bear/Bear.tscn" type="PackedScene" id=2]
@@ -55,6 +55,12 @@ albedo_color = Color( 0.447059, 0.392157, 0.392157, 1 )
 metallic = 0.22
 metallic_specular = 0.6
 
+[sub_resource type="BoxShape" id=15]
+
+[sub_resource type="BoxShape" id=16]
+
+[sub_resource type="BoxShape" id=17]
+
 [node name="Main" type="Node"]
 
 [node name="Ground" type="StaticBody" parent="."]
@@ -90,7 +96,7 @@ script = ExtResource( 4 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.20269, -1.7472, -7.44659 )
 
 [node name="Bookcase" type="MeshInstance" parent="."]
-transform = Transform( 0.0207156, 0, -0.999785, 0, 1, 0, 0.999785, 0, 0.0207156, -5.81181, -1.85432, 10.9247 )
+transform = Transform( 0.0207156, 0, -0.999785, 0, 1, 0, 0.999785, 0, 0.0207156, -5.72501, -1.80282, 11.6165 )
 mesh = ExtResource( 6 )
 
 [node name="Bedroom assets" type="MeshInstance" parent="."]
@@ -110,3 +116,24 @@ material/10 = SubResource( 12 )
 material/11 = SubResource( 13 )
 material/12 = SubResource( 14 )
 material/13 = ExtResource( 3 )
+
+[node name="Bed" type="StaticBody" parent="Bedroom assets"]
+transform = Transform( 0.99997, 0, 0.00773174, 0, 1, 0, -0.00773174, 0, 0.99997, -6.01063, 0, -8.26777 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bedroom assets/Bed"]
+transform = Transform( 4.5, 0, -2.39483e-09, 0, 2.2, 0, 3.99138e-09, 0, 2.7, 0.00249481, 2.41286, -0.322129 )
+shape = SubResource( 15 )
+
+[node name="Desk" type="StaticBody" parent="Bedroom assets"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.81714, 0, 5.51874 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bedroom assets/Desk"]
+transform = Transform( 1.7, 0, 0, 0, 3.1, 0, 0, 0, 3, 0.440746, 0, 0.235514 )
+shape = SubResource( 16 )
+
+[node name="StaticBody" type="StaticBody" parent="Bedroom assets"]
+transform = Transform( 0.603542, 0, 0.797331, 0, 1, 0, -0.797331, 0, 0.603542, -7.19511, 0, 5.55604 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bedroom assets/StaticBody"]
+transform = Transform( 1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 1.4262, 0 )
+shape = SubResource( 17 )
