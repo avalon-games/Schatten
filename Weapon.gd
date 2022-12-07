@@ -16,7 +16,7 @@ func _process(_delta):
 	
 	if Input.is_action_pressed("attack"):
 		$SwordAnimator.play("Swing")
-	var pos1 = get_node(".").get_global_translation()
+	var pos1 = get_node("./Position3D/Sword Pivot").get_global_translation()
 	var pos2 = pos1
 	pos2.x += 20
 
