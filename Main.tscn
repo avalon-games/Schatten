@@ -5,8 +5,17 @@
 [ext_resource path="res://art/Bedroom/woodplanks.material" type="Material" id=3]
 [ext_resource path="res://Camera.gd" type="Script" id=4]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 [ext_resource path="res://art/Bedroom/BedroomProps.obj" type="ArrayMesh" id=5]
+>>>>>>> Stashed changes
+=======
+[ext_resource path="res://art/Dude/Kid.tscn" type="PackedScene" id=5]
+[ext_resource path="res://art/Bedroom/ShelfLow.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://art/Bedroom/Bedroom.obj" type="ArrayMesh" id=7]
+[ext_resource path="res://art/Bedroom/Shelves.material" type="Material" id=8]
+[ext_resource path="res://art/Bedroom/WoodShelf.material" type="Material" id=9]
+[ext_resource path="res://art/Bedroom/EndTableLow.obj" type="ArrayMesh" id=10]
 >>>>>>> Stashed changes
 
 [sub_resource type="BoxShape" id=1]
@@ -28,14 +37,18 @@ mesh = SubResource( 2 )
 material/0 = ExtResource( 3 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
+<<<<<<< Updated upstream
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31778, 4.76134, 0 )
+=======
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31778, -0.52767, 0 )
+>>>>>>> Stashed changes
 light_energy = 2.116
 shadow_enabled = true
 shadow_bias = 1.2
 omni_range = 274.706
 
 [node name="BearFinal" parent="OmniLight" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.104861, 0 )
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.104861, 0 )
 
 [node name="CameraPivot" type="Position3D" parent="."]
 
@@ -43,6 +56,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.104861, 0 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 36.6966, 0 )
 script = ExtResource( 4 )
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54208, -1.74718, 1.46263 )
@@ -53,4 +67,23 @@ mesh = ExtResource( 5 )
 material/0 = ExtResource( 3 )
 material/8 = ExtResource( 3 )
 material/9 = ExtResource( 3 )
+>>>>>>> Stashed changes
+=======
+[node name="Bedroom assets" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.447, -1.74063, 11.9979 )
+mesh = ExtResource( 7 )
+material/0 = ExtResource( 9 )
+
+[node name="EndTableLow" type="MeshInstance" parent="."]
+transform = Transform( -6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -22.2178, -1.67907, 11.5909 )
+mesh = ExtResource( 10 )
+material/0 = ExtResource( 8 )
+
+[node name="ShelfLow" type="MeshInstance" parent="."]
+transform = Transform( -6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -22.2178, -1.67907, 11.5909 )
+mesh = ExtResource( 6 )
+material/0 = ExtResource( 8 )
+
+[node name="Test2" parent="." instance=ExtResource( 5 )]
+transform = Transform( -7.64949e-08, 0, 1.75, 0, 1.75, 0, -1.75, 0, -7.64949e-08, -17.0458, -1.74718, 7.23663 )
 >>>>>>> Stashed changes

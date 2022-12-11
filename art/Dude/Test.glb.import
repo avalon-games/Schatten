@@ -2,12 +2,21 @@
 
 importer="scene"
 type="PackedScene"
+<<<<<<< Updated upstream:art/Dude/Test.glb.import
 path="res://.import/Test.glb-f887586a12d0d36ac3892f91240bedf0.scn"
 
 [deps]
 
 source_file="res://art/Dude/Test.glb"
 dest_files=[ "res://.import/Test.glb-f887586a12d0d36ac3892f91240bedf0.scn" ]
+=======
+path="res://.import/Test2.glb-a4c3492cd9e0fd0010497e7c14985398.scn"
+
+[deps]
+
+source_file="res://art/Dude/Test2.glb"
+dest_files=[ "res://.import/Test2.glb-a4c3492cd9e0fd0010497e7c14985398.scn" ]
+>>>>>>> Stashed changes:art/Dude/Test2.glb.import
 
 [params]
 

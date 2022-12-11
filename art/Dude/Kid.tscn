@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://art/Dude/Material.material" type="Material" id=1]
+[ext_resource path="res://art/Dude/Test2.glb" type="PackedScene" id=2]
+
+[node name="Test2" instance=ExtResource( 2 )]
+
+[node name="Band_low" parent="Armature/Skeleton" index="0"]
+material/0 = ExtResource( 1 )
+
+[node name="Cape_low" parent="Armature/Skeleton" index="1"]
+material/0 = ExtResource( 1 )
+
+[node name="Center_low" parent="Armature/Skeleton" index="2"]
+material/0 = ExtResource( 1 )
+
+[node name="Hair_low" parent="Armature/Skeleton" index="3"]
+material/0 = ExtResource( 1 )
+
+[node name="Hat_low" parent="Armature/Skeleton" index="4"]
+material/0 = ExtResource( 1 )
+
+[node name="Head_low" parent="Armature/Skeleton" index="5"]
+material/0 = ExtResource( 1 )
+
+[node name="Knot_low" parent="Armature/Skeleton" index="6"]
+material/0 = ExtResource( 1 )
+
+[node name="Shirt_low" parent="Armature/Skeleton" index="7"]
+material/0 = ExtResource( 1 )
+
+[node name="Socks_low" parent="Armature/Skeleton" index="8"]
+material/0 = ExtResource( 1 )
