@@ -17,10 +17,10 @@ func _process(_delta):
 	if Input.is_action_pressed("attack"):
 		$SwordAnimator.play("Swing")
 	var pos1 = get_node("./Position3D/Sword Pivot").get_global_translation()
-	var pos2 = pos1
-	pos2.x += 20
+	var pos2 = get_node("./Position3D/Tip").get_global_translation()
 
-	line(pos1, pos2)
+	# for debugging, use the following line (will not be visible if overlapped by the 
+	# line(pos1, pos2)
 
 
 func line(pos1: Vector3, pos2: Vector3, color = Color.white):
