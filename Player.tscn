@@ -2,6 +2,7 @@
 
 [ext_resource path="res://Capsule.glb" type="PackedScene" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
+[ext_resource path="res://art/Kid/KidComposite.tscn" type="PackedScene" id=3]
 [ext_resource path="res://art/Sword/Sword.glb" type="PackedScene" id=4]
 [ext_resource path="res://Weapon.gd" type="Script" id=5]
 
@@ -77,6 +78,9 @@ anims/Swing = SubResource( 3 )
 
 [node name="Capsule" parent="Pivot" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, 3.80512, 0 )
+visible = false
+
+[node name="KidRig" parent="Pivot" instance=ExtResource( 3 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.168831, 0 )
