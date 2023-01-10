@@ -1,10 +1,6 @@
 extends KinematicBody
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 var immediate_geometry
 
 func _ready():

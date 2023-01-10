@@ -7,6 +7,17 @@ export var fall_acceleration = 75
 
 var velocity = Vector3.ZERO
 
+onready var player_animator = get_node("Pivot/KidActions/AnimationPlayer");
+#use the bool to block attacking again while attacking
+var is_attacking:bool = false;
+
+func _ready():
+	player_animator.connect("animation_finished",self,"reset_attack");
+
+func reset_attack(anim_name: String):
+	if anim_name == "SideSwing":
+		is_attacking = false;
+
 func _physics_process(delta):
 	# We create a local variable to store the input direction.
 	var direction = Vector3.ZERO
@@ -23,6 +34,9 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_up"):
 		direction.z -= 1
 	
+	if Input.is_action_pressed("attack") and !is_attacking:
+		player_animator.play("SideSwing");
+		is_attacking = true;
 	# Make the player look at the direction they are moving at:
 	# if direction != Vector3.ZERO:
 		# direction = direction.normalized()
