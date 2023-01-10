@@ -39,7 +39,7 @@ omni_range = 274.706
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.104861, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.42824, -15.9314 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.75985, -15.931 )
 
 [node name="CameraPivot" type="Position3D" parent="."]
 

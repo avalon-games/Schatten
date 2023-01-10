@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Capsule.glb" type="PackedScene" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -67,7 +67,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.87114, 0, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.979, 0, 0 )
 
 [node name="Sword Skin" parent="Pivot/Weapon/Position3D/Sword Pivot" instance=ExtResource( 4 )]
-transform = Transform( -0.0242403, 0.999705, 0, -0.999707, -0.0242403, 0, 0, 0, 0.999997, 2.023, 0, 0 )
+transform = Transform( -0.0242403, 0.999705, 0, -0.999707, -0.0242403, 0, 0, 0, 0.999997, 2.023, 0.222229, -0.160925 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Pivot/Weapon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.94191, 0, 0 )
@@ -80,7 +80,8 @@ anims/Swing = SubResource( 3 )
 transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, 3.80512, 0 )
 visible = false
 
-[node name="KidRig" parent="Pivot" instance=ExtResource( 3 )]
+[node name="KidActions" parent="Pivot" instance=ExtResource( 3 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.35553, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.168831, 0 )
