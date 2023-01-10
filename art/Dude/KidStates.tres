@@ -1,0 +1,31 @@
+[gd_resource type="AnimationNodeStateMachine" load_steps=10 format=2]
+
+[sub_resource type="AnimationNodeAnimation" id=1]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=2]
+animation = "SideSwing"
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=4]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=5]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=6]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=7]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=8]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+
+[resource]
+states/Idle/node = SubResource( 1 )
+states/Idle/position = Vector2( 175.667, 50.3333 )
+states/SideSwing/node = SubResource( 2 )
+states/SideSwing/position = Vector2( 482.333, 63.6667 )
+states/Walk/node = SubResource( 3 )
+states/Walk/position = Vector2( 419, 155 )
+transitions = [ "Idle", "Walk", SubResource( 4 ), "Walk", "Idle", SubResource( 5 ), "Idle", "SideSwing", SubResource( 6 ), "SideSwing", "Idle", SubResource( 7 ), "SideSwing", "Walk", SubResource( 8 ), "Walk", "SideSwing", SubResource( 9 ) ]
