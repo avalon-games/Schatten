@@ -14,7 +14,7 @@
 extents = Vector3( 30, 1, 30 )
 
 [sub_resource type="CubeMesh" id=2]
-size = Vector3( 60, 2, 60 )
+size = Vector3( 120, 2, 90 )
 
 [node name="Main" type="Node"]
 
@@ -25,6 +25,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.74721, 0 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground"]
+transform = Transform( 1.92099, 0, 0, 0, 1, 0, 0, 0, 1.92099, 0, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 3 )
 
@@ -33,10 +34,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31778, 10.6926, 0 )
 light_energy = 2.116
 shadow_enabled = true
 shadow_bias = 1.2
-omni_range = 274.706
+omni_range = 32.428
 
 [node name="BearFinal" parent="OmniLight" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.104861, 0 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.104861, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.75985, -15.931 )
@@ -44,20 +45,20 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.75985, -15.931 )
 [node name="CameraPivot" type="Position3D" parent="."]
 
 [node name="Camera" type="Camera" parent="CameraPivot"]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 36.6966, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 27.7369, 0 )
 script = ExtResource( 4 )
 
 [node name="Bedroom assets" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.447, -1.74063, 11.9979 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.28837, -1.74063, -1.33894 )
 mesh = ExtResource( 7 )
 material/0 = ExtResource( 9 )
 
 [node name="EndTableLow" type="MeshInstance" parent="."]
-transform = Transform( -6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -22.2178, -1.67907, 11.5909 )
+transform = Transform( -6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -12.7404, -1.67907, -1.94548 )
 mesh = ExtResource( 10 )
 material/0 = ExtResource( 8 )
 
 [node name="ShelfLow" type="MeshInstance" parent="."]
-transform = Transform( -6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -22.2178, -1.67907, 11.5909 )
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.659283, -1.61382, -11.7096 )
 mesh = ExtResource( 6 )
 material/0 = ExtResource( 8 )
