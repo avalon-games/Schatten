@@ -36,6 +36,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.104861, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.42824, 0 )
+speed = 14
+fall_acceleration = 75
 
 [node name="CameraPivot" type="Position3D" parent="."]
 

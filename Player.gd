@@ -35,18 +35,3 @@ func movePlayer(delta):
 	velocity.z = direction.z * speed
 	velocity.y -= fall_acceleration * delta
 	velocity = move_and_slide(velocity, Vector3.UP)
-	
-func _physics_process(delta):
-	var lightsource = get_node("../OmniLight")
-	var swordPivot = get_node("./Sword Pivot")
-	var swordTip = get_node("./Sword Pivot/SwordTip")
-	var from = lightsource.get_global_translation();
-	var to = from + (swordPivot.position - from) * 200
-	
-	var space_state = get_world().direct_space_state
-	var result = space_state.intersect_ray(from, to)
-	if result:
-		var player = get_node("../../Player")
-		var target = result.position
-		target.y = player.get_global_translation().y
-		player.look_at(target, Vector3.UP)
