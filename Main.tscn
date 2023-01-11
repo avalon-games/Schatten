@@ -15,7 +15,7 @@
 extents = Vector3( 30, 1, 30 )
 
 [sub_resource type="CubeMesh" id=2]
-size = Vector3( 60, 2, 60 )
+size = Vector3( 120, 2, 90 )
 
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 0.380392, 0.392157, 0.827451, 1 )
@@ -70,6 +70,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.74721, 0 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Ground"]
+transform = Transform( 1.92099, 0, 0, 0, 1, 0, 0, 0, 1.92099, 0, 0, 0 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 3 )
 
@@ -78,10 +79,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.31778, 10.6926, 0 )
 light_energy = 2.116
 shadow_enabled = true
 shadow_bias = 1.2
-omni_range = 274.706
+omni_range = 32.428
 
 [node name="BearFinal" parent="OmniLight" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.104861, 0 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.104861, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.42824, 0 )
@@ -89,7 +90,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.42824, 0 )
 [node name="CameraPivot" type="Position3D" parent="."]
 
 [node name="Camera" type="Camera" parent="CameraPivot"]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 36.6966, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 27.7369, 0 )
 script = ExtResource( 4 )
 
 [node name="Test" parent="." instance=ExtResource( 5 )]
@@ -100,7 +101,7 @@ transform = Transform( 0.0207156, 0, -0.999785, 0, 1, 0, 0.999785, 0, 0.0207156,
 mesh = ExtResource( 6 )
 
 [node name="Bedroom assets" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.447, -1.74063, 11.9979 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.28837, -1.74063, -1.33894 )
 mesh = ExtResource( 7 )
 material/0 = ExtResource( 9 )
 material/1 = SubResource( 3 )
@@ -117,23 +118,12 @@ material/11 = SubResource( 13 )
 material/12 = SubResource( 14 )
 material/13 = ExtResource( 3 )
 
-[node name="Bed" type="StaticBody" parent="Bedroom assets"]
-transform = Transform( 0.99997, 0, 0.00773174, 0, 1, 0, -0.00773174, 0, 0.99997, -6.01063, 0, -8.26777 )
+[node name="EndTableLow" type="MeshInstance" parent="."]
+transform = Transform( -6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -12.7404, -1.67907, -1.94548 )
+mesh = ExtResource( 10 )
+material/0 = ExtResource( 8 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Bedroom assets/Bed"]
-transform = Transform( 4.5, 0, -2.39483e-09, 0, 2.2, 0, 3.99138e-09, 0, 2.7, 0.00249481, 2.41286, -0.322129 )
-shape = SubResource( 15 )
-
-[node name="Desk" type="StaticBody" parent="Bedroom assets"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.81714, 0, 5.51874 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Bedroom assets/Desk"]
-transform = Transform( 1.7, 0, 0, 0, 3.1, 0, 0, 0, 3, 0.440746, 0, 0.235514 )
-shape = SubResource( 16 )
-
-[node name="StaticBody" type="StaticBody" parent="Bedroom assets"]
-transform = Transform( 0.603542, 0, 0.797331, 0, 1, 0, -0.797331, 0, 0.603542, -7.19511, 0, 5.55604 )
-
-[node name="CollisionShape" type="CollisionShape" parent="Bedroom assets/StaticBody"]
-transform = Transform( 1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 1.4262, 0 )
-shape = SubResource( 17 )
+[node name="ShelfLow" type="MeshInstance" parent="."]
+transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0.659283, -1.61382, -11.7096 )
+mesh = ExtResource( 6 )
+material/0 = ExtResource( 8 )
