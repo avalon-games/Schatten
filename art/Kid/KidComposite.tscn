@@ -1,12 +1,54 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://art/Kid/KidActions.glb" type="PackedScene" id=1]
 [ext_resource path="res://art/Sword/SwordFinal.tscn" type="PackedScene" id=2]
 
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "SideSwing"
+
+[sub_resource type="AnimationNodeAnimation" id=5]
+animation = "Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=8]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=11]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=12]
+switch_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=14]
+switch_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=1]
+states/Idle/node = SubResource( 3 )
+states/Idle/position = Vector2( 208.333, 46.3333 )
+states/SideSwing/node = SubResource( 10 )
+states/SideSwing/position = Vector2( 81.6667, 184.333 )
+states/Walk/node = SubResource( 5 )
+states/Walk/position = Vector2( 497.667, 185.667 )
+transitions = [ "Idle", "Walk", SubResource( 8 ), "Walk", "Idle", SubResource( 9 ), "SideSwing", "Idle", SubResource( 11 ), "Idle", "SideSwing", SubResource( 12 ), "Walk", "SideSwing", SubResource( 14 ), "SideSwing", "Walk", SubResource( 16 ) ]
+start_node = "Idle"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=2]
+
 [node name="KidActions" instance=ExtResource( 1 )]
 
+[node name="Skeleton" parent="Armature" index="0"]
+bones/12/bound_children = [ NodePath("BoneAttachment") ]
+
 [node name="BoneAttachment" type="BoneAttachment" parent="Armature/Skeleton" index="9"]
-transform = Transform( 0.00643221, 0.0557809, -0.998422, -0.994798, -0.101148, -0.0120599, -0.101662, 0.993306, 0.0548401, -0.37692, 0.0234426, 0.623168 )
+transform = Transform( 0.0154438, 0.161263, -0.986791, -0.999472, 0.0306932, -0.0106262, 0.0285742, 0.986434, 0.161652, -0.308998, 0.0623393, 0.711249 )
 bone_name = "HandR"
 
 [node name="Spatial" type="Spatial" parent="Armature/Skeleton/BoneAttachment" index="0"]
@@ -14,3 +56,9 @@ transform = Transform( 0.903364, 0.223376, -0.366107, -0.314442, 0.925482, -0.21
 
 [node name="Sword" parent="Armature/Skeleton/BoneAttachment/Spatial" index="0" instance=ExtResource( 2 )]
 transform = Transform( -1.09278e-08, 0, 0.25, 0, 0.25, 0, -0.25, 0, -1.09278e-08, -0.198431, 0.581185, -0.130917 )
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource( 1 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 2 )
